@@ -1,0 +1,117 @@
+@import '../../styles/variables';
+
+.historical-timeline {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 80px 100px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px 60px;
+  }
+}
+
+.timeline-header {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 80px;
+  border-left: 5px solid rgba($text-primary, 0.1);
+
+  @media (max-width: 768px) {
+    padding-left: 40px;
+    margin-bottom: 40px;
+    border-left-width: 3px;
+  }
+
+  .period-counter {
+    font-size: 14px;
+    color: $text-secondary;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .counter-current {
+      color: $text-primary;
+      font-weight: 600;
+    }
+
+    .counter-separator {
+      margin: 0 4px;
+    }
+
+    .counter-total {
+      font-weight: 400;
+    }
+  }
+
+  .period-category {
+    font-size: 56px;
+    font-weight: 700;
+    color: $text-primary;
+    margin: 0;
+    line-height: 1.2;
+
+    @media (max-width: 1024px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+}
+
+.timeline-years {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 200px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 150px;
+    gap: 60px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+    gap: 40px;
+  }
+
+  .year-start,
+  .year-end {
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 1;
+    color: $accent-color;
+
+    @media (max-width: 1024px) {
+      font-size: 150px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 56px;
+    }
+  }
+
+  .year-start {
+    color: $accent-color;
+  }
+
+  .year-end {
+    color: $secondary-color;
+  }
+}
+

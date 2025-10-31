@@ -1,0 +1,124 @@
+@import '../../styles/variables';
+
+.events-slider {
+  position: relative;
+  width: 100%;
+  padding: 0 80px;
+  margin-top: 56px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+}
+
+.slider-navigation {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.nav-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba($text-primary, 0.3);
+  background-color: transparent;
+  color: $text-primary;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 8px;
+      height: 12px;
+    }
+  }
+
+  &:hover:not(.disabled) {
+    background-color: $background-color;
+    border-color: $text-primary;
+  }
+
+  &:focus {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.events-swiper {
+  width: 100%;
+  padding-bottom: 20px;
+
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.event-card {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .event-year {
+    font-size: 25px;
+    font-weight: 400;
+    color: $accent-color;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .event-description {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $text-primary;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Custom Swiper pagination (if needed)
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: $text-primary;
+  opacity: 0.3;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+
+  &-active {
+    opacity: 1;
+    background-color: $text-primary;
+  }
+}
+
